@@ -1,0 +1,7 @@
+.gradle
+.idea
+*.iml
+com.jake.swtfx.binding/.idea
+com.jake.swtfx.binding/bin
+com.jake.swtfx.binding/build
+com.jake.swtfx.binding/local.properties
