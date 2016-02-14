@@ -1,8 +1,9 @@
 # com.jake.swtfx.binding
 Supports using SWT Controls with Java FX Bindings
 
-Installation:
-For Gradle:
+<pre>
+Installation (Gradle):
+
 repositories {
   maven {
       url "https://dl.bintray.com/jake-stacktrace/maven"
@@ -20,3 +21,4 @@ For example:
   Label label = new Label(compositeParent, SWT.NONE);
   StringProperty nameProperty = new SimpleStringProperty();
   SWTBinding.wrap(label).textProperty().bind(nameProperty);
+</pre>
