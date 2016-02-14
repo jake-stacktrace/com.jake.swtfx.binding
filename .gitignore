@@ -1,6 +1,8 @@
 .gradle
 .idea
 *.iml
+Example/.idea
+Example/build
 com.jake.swtfx.binding/.idea
 com.jake.swtfx.binding/bin
 com.jake.swtfx.binding/build
