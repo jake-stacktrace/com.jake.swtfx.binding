@@ -13,9 +13,6 @@ repositories {
     maven {
         url "https://swt-repo.googlecode.com/svn/repo/"
     }
-    maven {
-      url "https://dl.bintray.com/jake-stacktrace/maven"
-    }
 }
 
 dependencies {

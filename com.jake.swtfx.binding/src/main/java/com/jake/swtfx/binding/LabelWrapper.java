@@ -1,5 +1,8 @@
 package com.jake.swtfx.binding;
 
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 
@@ -25,12 +28,16 @@ public class LabelWrapper extends ControlWrapper {
 		addDisposeRunnable(() -> textProperty.removeListener(changeListener));
 		return textProperty;		
 	}
-	
-	public static void main(String[] args) {
-		SimpleStringProperty simpleStringProperty2 = new SimpleStringProperty();
-		SimpleStringProperty simpleStringProperty = new SimpleStringProperty();
-		simpleStringProperty.bindBidirectional(simpleStringProperty2);
-		simpleStringProperty2.set("foo");
-		System.out.println(simpleStringProperty2.get());
+
+	public ObjectProperty<Image> imageProperty() {
+		ObjectProperty<Image> imageProperty = new SimpleObjectProperty<>();
+		ChangeListener<Image> changeListener = (observable, oldValue, newValue) ->
+				Display.getDefault().asyncExec(() -> {
+					label.setImage(newValue);
+					label.getParent().layout(true, true);
+				});
+		imageProperty.addListener(changeListener);
+		addDisposeRunnable(() -> imageProperty.removeListener(changeListener));
+		return imageProperty;
 	}
 }

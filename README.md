@@ -5,13 +5,11 @@ Supports using SWT Controls with Java FX Bindings
 Installation (Gradle):
 
 repositories {
-  maven {
-      url "https://dl.bintray.com/jake-stacktrace/maven"
-  }
+  jcenter()
 }
 
 dependencies {
-    compile 'com.jake:com.jake.swtfx.binding:1.0.0'
+    compile 'com.jake:com.jake.swtfx.binding:1.0.1'
 }
 
 Usage:

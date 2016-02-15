@@ -10,7 +10,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 // This is the library version used when deploying the artifact
-version = "1.0.0"
+version = "1.0.1"
 group 'com.jake'
 
 repositories {
